@@ -2,21 +2,21 @@
 ![M3U8-Downloader-Build](https://img.shields.io/github/workflow/status/heisir2014/M3U8-Downloader/M3U8-Downloader-Build?style=flat-square)
 [![Release](https://img.shields.io/github/v/release/heisir2014/m3u8-downloader?style=flat-square)](https://github.com/HeiSir2014/M3U8-Downloader/releases/latest)
 [![Download](https://img.shields.io/github/downloads/heisir2014/m3u8-downloader/total?style=flat-square)](https://github.com/HeiSir2014/M3U8-Downloader/releases/latest)
-# M3U8-Downloader [直接下载](#下载可执行包)
-M3U8-Downloader是基于Electron框架开发的一款可以下载、播放HLS视频流的APP，功能特点如下：
+# M3U8-Downloader Direct Download
+M3U8-Downloader is an application developed based on the Electron framework that allows downloading and playing HLS video streams. Its key features include the following:
 
-| 功能 | 支持 |
-| :-- | --: |
-| HLS协议点播源 | ✓ |
-| 自定义Http协议头下载 | ✓ |
-| 自定义KEY和IV解密 | ✓ |
-| 本地M3U8文件下载 | ✓ |
-| M3U8 直播源 | ✓ |
-| 标准 AES-128-CBC加密 | ✓ |
-| 标准 AES-196-CBC加密 | ✓ |
-| 标准 AES-256-CBC加密 | ✓ |
-| 非标准 AES-*-CBC加密 | ㄨ(可定制) |
-| 网页嗅探视频源 | ✓ |
+| Feature                   | Supported |
+| :------------------------ | --------: |
+| HLS protocol VOD sources   |        ✓ |
+| Custom HTTP header download|        ✓ |
+| Custom KEY and IV decryption|        ✓ |
+| Local M3U8 file download   |        ✓ |
+| M3U8 live sources          |        ✓ |
+| Standard AES-128-CBC encryption |   ✓ |
+| Standard AES-196-CBC encryption |   ✓ |
+| Standard AES-256-CBC encryption |   ✓ |
+| Non-standard AES-*-CBC encryption |  ㄨ(customizable) |
+| Webpage video source sniffing |  ✓ |
 
 
 <div align="center">
@@ -25,103 +25,103 @@ M3U8-Downloader是基于Electron框架开发的一款可以下载、播放HLS视
     <br>
 </div>
 
-# 功能规划
+# Feature Planning
 
 ```mermaid
 flowchart LR
-    A1("M3U8-Downloader") ---> B1("MP4、M3U8、MPD下载")
-    B1 ---> C1(自定义 文件名)
-    B1 ---> C2(自定义 Http Header)
-    C2 ---> D1("Referer、Cookies、User-Agent")
-    B1 ---> C3(自定义 AES Key)
-    B1 ---> C4(多码率选择)
-    B1 ---> C5(HTTP代理)
+    A1("M3U8-Downloader") ---> B1("MP4, M3U8, MPD Download")
+    B1 ---> C1(Customize File Name)
+    B1 ---> C2(Customize HTTP Header)
+    C2 ---> D1(Referer, Cookies, User-Agent)
+    B1 ---> C3(Customize AES Key)
+    B1 ---> C4(Multiple Bitrate Selection)
+    B1 ---> C5(HTTP Proxy)
     
-    A1 ---> B2("MP4、M3U8、MPD批量下载")
-    A1 ---> B3("TS文件合并")
-    A1 ---> B4("浏览器资源嗅探")
-    B4 ---> C6("FLV、MP4、MP3、WAV")
-    B4 ---> C7("HLS(M3U8、TS)")
-    B4 ---> C8("DASH(MPD)")
-    B4 ---> C12(模拟多终端)
-    A1 ---> B5("Settings")
-    B5 ---> C9(存储路径)
-    B5 ---> C10(设置代理)
-    B5 ---> C11(日志查看)
+    A1 ---> B2("MP4, M3U8, MPD Batch Download")
+    A1 ---> B3(Merge TS Files)
+    A1 ---> B4(Browser Resource Sniffing)
+    B4 ---> C6(FLV, MP4, MP3, WAV)
+    B4 ---> C7(HLS - M3U8, TS)
+    B4 ---> C8(DASH - MPD)
+    B4 ---> C12(Simulate Multiple Terminals)
+    A1 ---> B5(Settings)
+    B5 ---> C9(Storage Path)
+    B5 ---> C10(Set Proxy)
+    B5 ---> C11(View Logs)
 ```
 ![mermaid-diagram-20210328004859](https://i.loli.net/2021/03/28/Ca5yhFQeTmG69DK.png)
 
 ---
 
-# 获取M3U8视频地址
+# Obtaining M3U8 video URLs
 
-在chrome浏览器打开视频网页，按下F12,页签点击到Network页面，在Filter框里输入"m3u8",然后按F5刷新页面，如果网页里的视频使用的是HLS源，就可以在这里捕获到视频流地址，然后选中右键 Copy -> Copy Link Address.
-提供m3u8源地址，下载并无损转码Mp4文件
+To obtain the M3U8 video URL, open the video webpage in the Chrome browser, press F12, navigate to the Network tab, enter 'm3u8' in the Filter box, and then press F5 to refresh the page. If the video on the webpage uses HLS as its source, you can capture the video stream address here. Then, right-click on it, select 'Copy' -> 'Copy Link Address'.
 
-[自定义头添加-视频教程](https://player.bilibili.com/player.html?aid=498666070&bvid=BV1QK411n7VJ&cid=206827525&page=1)
+By providing the M3U8 source address, you can download and losslessly transcode it into an MP4 file.
 
-# 下载可执行包
+[Adding Custom Headers - Video Tutorial](https://player.bilibili.com/player.html?aid=498666070&bvid=BV1QK411n7VJ&cid=206827525&page=1)
 
-## 前往百度网盘下载
+# Download the executable package.
+
+## Go to Baidu Netdisk for download.
 
 ```
-链接：https://pan.baidu.com/s/14zaMkxgfTC0HSge-Ze6EpQ 
-提取码：m3u8 
-复制这段内容后打开百度网盘手机App，操作更方便哦--来自百度网盘超级会员V1的分享
+Link：https://pan.baidu.com/s/14zaMkxgfTC0HSge-Ze6EpQ 
+extraction code：m3u8 
 ```
 
-## Github 下载
-## [Releases下载](https://github.com/HeiSir2014/M3U8-Downloader/releases)
+## Download from GitHub.
+## [Download from Releases](https://github.com/HeiSir2014/M3U8-Downloader/releases)
 
-# 运行源码
-### NodeJS开发环境搭建
+# Run the source code.
+### Set up Node.js development environment
 
-安装NodeJs最新版，[NodeJs Download](http://nodejs.cn/download/)
+Install the latest version of Node.js.[NodeJs Download](http://nodejs.org/)
 
-### Clone 代码
+### Clone the code
 
-在任意文件夹下新建一个文件夹存放代码，并执行以下命令
+Create a new folder in any directory to store the code and execute the following commands
 ```
 cd newdir
 
 git clone https://github.com/HeiSir2014/M3U8-Downloader.git .
 ```
-### Yarn 环境安装
+### Yarn Environment Installation
 
 ```
 npm install yarn -g
 ```
 
-### Package 依赖安装
+### Package Dependency Installation
 
 ```
 yarn
 ```
 
-ffmpeg-static 安装超时，可以尝试使用镜像:
+ffmpeg-static installation timed out, you can try using a mirror:
 
 ```
 FFMPEG_BINARIES_URL=https://cdn.npmmirror.com/binaries/ffmpeg-static yarn
 ```
 
-### 运行M3U8-Downloader
+### Run M3U8-Downloader
 
 ```
 yarn start
 ```
-### 打包发布
+### Packaging and Deployment
 
 ```
-//windows 平台打包
+//Packaging for Windows Platform
 yarn pack-win
 
-//mac 平台打包
+//Packaging for Mac Platform
 yarn pack-mac
 
 ```
 
 ### Enjoy it
 
-### 赞赏
+### Donate
 
-[赞赏链接](https://tools.heisir.cn/HLSDownload/2019/07/08/02/)
+[Donation Link](https://tools.heisir.cn/HLSDownload/2019/07/08/02/)
